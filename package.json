@@ -1,0 +1,22 @@
+{
+  "name": "romildo-website",
+  "private": true,
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-surge": "^0.1.0",
+    "gulp-htmlmin": "^4.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rccavalcanti/romildo-website.git"
+  },
+  "author": "Rafael Cavalcanti <rccavalcanti@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/rccavalcanti/romildo-website/issues"
+  },
+  "homepage": "https://github.com/rccavalcanti/romildo-website#readme"
+}

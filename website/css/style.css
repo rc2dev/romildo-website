@@ -1,0 +1,68 @@
+/* Fonts */
+.title1 {
+  font-family: Oswald, sans-serif;
+}
+
+.title2 {
+  font-family: 'Mr Dafoe', cursive;
+}
+
+
+/* Title box */
+#title-box {
+  margin-left: 7%;
+}
+
+#title-box h1 {
+  font-size: 56px;
+}
+
+
+/* Links in content */
+.w3-content a {
+  text-decoration: none;
+}
+
+.w3-content a:hover {
+  text-decoration: underline;
+}
+
+
+/* Imóveis */
+#more {
+  color: #3f78ba;
+}
+
+
+/* Contact list */
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+li {
+  margin-top: 25px;
+}
+
+.w3-content .fa {
+  padding-right: 7px;   /* Space between icon and text */
+}
+
+.fa-whatsapp {
+  color: #009688;
+}
+
+.fa-facebook-official {
+  color: #4267b2;
+}
+
+
+/* Footer spacing */
+footer p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.footer-col {
+  margin-bottom: 30px;
+}
