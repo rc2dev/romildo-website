@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-htmlmin');
 var del = require('del');
-var surge = require('gulp-surge');
 
 var paths = {
   css: 'website/css/style.css',
@@ -57,13 +56,6 @@ gulp.task('icons', ['clean'], function() {
     .pipe(gulp.dest('build/icons'));
 });
 
-// Deploy to Surge
-gulp.task('deploy', [], function () {
-  return surge({
-    project: './build',
-    domain: 'romildocorretor.com.br'
-  })
-})
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['css', 'html', 'js', 'img', 'icons', 'deploy']);
+gulp.task('default', ['css', 'html', 'js', 'img', 'icons']);
