@@ -8,7 +8,8 @@ var paths = {
   js: 'website/js/*',
   html: 'website/*.html',
   images: 'website/img/*',
-  icons: 'website/icons/*'
+  icons: 'website/icons/*',
+  netlify: 'website/_redirects'
 };
 
 gulp.task('clean', function() {
@@ -35,8 +36,6 @@ gulp.task('html', ['clean'], function() {
 // Copy vendor JS
 gulp.task('js', ['clean'], function() {
   return gulp.src(paths.js)
-    // Pass in options to the task
-    //.pipe(imagemin({optimizationLevel: 5}))
     .pipe(gulp.dest('build/js'));
 });
 
@@ -56,6 +55,12 @@ gulp.task('icons', ['clean'], function() {
     .pipe(gulp.dest('build/icons'));
 });
 
+// Copy _netlify
+gulp.task('netlify', ['clean'], function() {
+  return gulp.src(paths.netlify)
+    .pipe(gulp.dest('build/'));
+});
+
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['css', 'html', 'js', 'img', 'icons']);
+gulp.task('default', ['css', 'html', 'js', 'img', 'icons', 'netlify']);
