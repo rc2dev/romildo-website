@@ -62,3 +62,9 @@ footer p {
 .footer-col {
   margin-bottom: 30px;
 }
+
+
+/* Footer logo */
+#logo {
+  height: 96px;
+}
