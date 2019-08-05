@@ -1,4 +1,4 @@
-/* Fonts */
+/* Fonts for navbar and header */
 .title1 {
   font-family: Oswald, sans-serif;
 }
@@ -18,19 +18,15 @@
 }
 
 
-/* Links in content */
-.w3-content a {
+/* Links except on navbar */
+.w3-container a, footer a {
   text-decoration: none;
 }
 
-.w3-content a:hover {
-  text-decoration: underline;
-}
 
-
-/* Imóveis */
-#more {
-  color: #3f78ba;
+/* Big icons */
+.fa-home, .fa-map-marked-alt {
+  font-size: 150px !important;
 }
 
 
@@ -44,7 +40,7 @@ li {
   margin-top: 25px;
 }
 
-.w3-content .fa {
+.w3-content .fa, .w3-content .fab {
   padding-right: 7px;   /* Space between icon and text */
 }
 

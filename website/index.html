@@ -31,7 +31,7 @@
       <!-- My CSS -->
       <link rel="stylesheet" href="/css/style.css">
       <!-- Icons -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://kit.fontawesome.com/c762a91b97.js"></script>
       <!-- Fonts -->
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald">
   </head>
@@ -67,58 +67,70 @@
       </div>
     </header>
 
-    <!-- Page content -->
-    <div class="w3-content w3-padding" style="max-width:1564px">
-
-      <!-- About Section -->
-      <div class="w3-container w3-padding-32" id="about">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sobre</h3>
-        <p>Sou especializado na <b>compra, venda, aluguel e
-          avaliação de imóveis</b>. Ofereço toda assessoria necessária para a
-          realização de uma transação segura e tranquila.</p>
-        <p><b>Reconhecido no mercado imobiliário pela ética profissional e
-          transparência</b>, oferecendo a cada cliente um atendimento
-          personalizado, resultando em segurança e satisfação em todos os
-          negócios realizados.</p>
-        <p>Atuo na cidade do Rio de Janeiro, com ênfase nos bairros da <b>zona
-           sul, centro, zona norte, Barra da Tijuca, Recreio e adjacências</b>.
-        </p>
-        <p><a href="#contact">Entre em contato</a> e terei o
-          prazer em ajudá-lo a realizar o sonho de adquirir a casa própria.</p>
+    <!-- First grid-->
+    <div class="w3-row-padding w3-padding-64 w3-container" id="about">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>Compra, venda, aluguel e avaliação de imóveis</h1>
+          <h5 class="w3-padding-32">Ofereço toda a assessoria necessária para a 
+            realização de uma transação segura e tranquila em imóveis
+            residenciais e comerciais.</h5>
+          <p class="w3-text-grey">Reconhecido no mercado imobiliário pela ética 
+            profissional e transparência, oferecendo a cada cliente um atendimento
+            personalizado, resultando em segurança e satisfação em todos os
+            negócios realizados.</p>
+        </div>
+        <div class="w3-third w3-center">
+          <i class="fa fa-home w3-padding-64 w3-text-blue-gray"></i>
+        </div>
       </div>
+    </div>
 
-      <!-- Carteira -->
-      <div class="w3-container w3-center">
-        <h4 class="w3-padding-16" id="more">
+    <!-- Second grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-third w3-center">
+          <i class="fa fa-map-marked-alt w3-padding-64 w3-text-blue-gray 
+            w3-margin-right"></i>
+        </div>
+      
+        <div class="w3-twothird">
+         <h1>Atuação na cidade do Rio</h1>
+          <h5 class="w3-padding-32">Com ênfase na Zona Sul, Centro, Zona Norte, Barra
+            da Tijuca, Recreio e adjacências.</h5>
+          <p class="w3-text-grey"><a href="#contact">Entre em contato</a> e terei o
+            prazer em ajudá-lo a realizar o sonho de adquirir a casa própria.</p>
+        </div>
+      </div>
+     </div>
+
+    <!-- Portfolio -->
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64" id="more">
+        <h1 class="w3-margin w3-xlarge">
           <span class="fa fa-arrow-circle-right"></span>
-          <a href="https://www.zapimoveis.com.br/imobiliaria/romildo-imoveis/"
-            target="_blank" rel="noopener">
-            <b>Clique aqui e veja as oportunidades</b>
-          </a>
-        </h4>
-      </div>
+          <a href="https://www.zapimoveis.com.br/imobiliaria/romildo-imoveis/" 
+            target="_blank" rel="noopener">Clique aqui e veja as oportunidades</a>
+        </h1>
+    </div>
 
-      <!-- Contact Section -->
-      <div class="w3-container w3-padding-32" id="contact">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-          Contato
-        </h3>
+    <!-- Contact -->
+    <div class="w3-row-padding w3-padding-64 w3-container" id="contact">
+      <div class="w3-content">
+        <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          Entre em contato</h1>
         <ul>
           <li>
-            <span class="fa fa-envelope"></span>
+            <i class="far fa-envelope"></i>
             <a href="mailto:rrc.corretor@gmail.com" target="_blank" rel="noopener">
-              rrc.corretor@gmail.com
-            </a>
+              rrc.corretor@gmail.com</a>
           </li>
           <li>
-            <span class="fa fa-whatsapp"></span>
-            Whatsapp: (21) 98869-1981
+            <i class="fab fa-whatsapp"></i>Whatsapp: (21) 98869-1981
           </li>
         </ul>
       </div>
-
-    <!-- End page content -->
     </div>
+
 
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-16">
@@ -128,16 +140,15 @@
           <p>Romildo R. Cavalcanti</p>
           <p>Corretor Imobiliário</p>
           <p>CRECI 043420</p>
-          <p><span class="fa fa-map-marker"></span> Rio de Janeiro, Brasil</p>
+          <p><i class="fa fa-map-marker"></i> Rio de Janeiro, Brasil</p>
         </div>
         <div class="w3-col m3 w3-center footer-col">
           <img src="/img/logo.png">
         </div>
       </div>
       <div class="w3-row">
-        <p><small>
-          &copy; Copyright 2017-<span id="current_year"></span> <a href="https://rafaelc.org/">Rafael Cavalcanti</a>
-        </small></p>
+        <p><small>&copy; Copyright 2017-<span id="current_year"></span> 
+          <a href="https://rafaelc.org/">Rafael Cavalcanti</a></small></p>
       </div>
     </footer>
 
