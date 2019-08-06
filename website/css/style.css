@@ -14,9 +14,32 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 
+/* Create a Parallax Effect */
+.bgimg-1 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Header image */
+.bgimg-1 {
+  background-image: url('/img/rj.jpg');
+  min-height: 100%;
+}
+
+
+body, html {
+  height: 100%;       /* Necessary for the header */
+  line-height: 1.8;
+}
+
+
 /* Title box */
 #title-box {
   margin-left: 7%;
+  white-space: nowrap;
 }
 
 #title-box h1 {
