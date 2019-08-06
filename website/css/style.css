@@ -26,9 +26,18 @@ body, h1, h2, h3, h4, h5, h6, p {
 /* Header image */
 .bgimg-1 {
   background-image: url('/img/rj.jpg');
-  min-height: 100%;
+  height: 100%;
 }
 
+
+/*  Turn off parallax scrolling and reduce size of
+ the header picture for tablets and phones */
+@media only screen and (max-device-width: 1000px) {
+  .bgimg-1 {
+    background-attachment: scroll;
+    height: 50%;
+  }
+}
 
 body, html {
   height: 100%;       /* Necessary for the header */
