@@ -9,58 +9,58 @@ var paths = {
   html: 'website/*.html',
   images: 'website/img/*',
   icons: 'website/icons/*',
-  netlify: 'website/_redirects'
+  redirects: 'website/_redirects'
 };
 
-gulp.task('clean', function() {
+function clean() {
     return del(['build']);
-});
+}
 
-// Minify and copy all JavaScript (except vendor scripts)
-// with sourcemaps all the way down
-gulp.task('css', ['clean'], function() {
+function css() {
   return gulp.src(paths.css)
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('build/css'));
-});
+}
 
 // Minify HTML
-gulp.task('html', ['clean'], function() {
+function html() {
   return gulp.src(paths.html)
     .pipe(htmlmin({collapseWhitespace: true, customAttrCollapse: /content/,
       minifyJS: true, removeComments: true }))
       //.pipe(concat('all.min.css'))
     .pipe(gulp.dest('build/'));
-});
+}
 
-// Copy vendor JS
-gulp.task('js', ['clean'], function() {
+function js() {
   return gulp.src(paths.js)
     .pipe(gulp.dest('build/js'));
-});
+}
 
-// Copy all static images
-gulp.task('img', ['clean'], function() {
+function img() {
   return gulp.src(paths.images)
     // Pass in options to the task
     //.pipe(imagemin({optimizationLevel: 5}))
     .pipe(gulp.dest('build/img'));
-});
+}
 
-// Copy static icons
-gulp.task('icons', ['clean'], function() {
+function icons() {
   return gulp.src(paths.icons)
     // Pass in options to the task
     //.pipe(imagemin({optimizationLevel: 5}))
     .pipe(gulp.dest('build/icons'));
-});
+}
 
-// Copy _netlify
-gulp.task('netlify', ['clean'], function() {
-  return gulp.src(paths.netlify)
+// Copy netlify redirects
+function redirects() {
+  return gulp.src(paths.redirects)
     .pipe(gulp.dest('build/'));
-});
+}
 
+var build = gulp.series(clean, gulp.parallel(css, html, js, img,
+	icons, redirects));
 
-// The default task (called when you run `gulp` from cli)
-gulp.task('default', ['css', 'html', 'js', 'img', 'icons', 'netlify']);
+// Declare tasks
+exports.clean = clean;
+
+// Task to be called by just running `gulp` from cli
+exports.default = build;

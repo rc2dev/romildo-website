@@ -3,8 +3,8 @@
   "private": true,
   "dependencies": {
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.4",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^3.10.0",
     "gulp-htmlmin": "^4.0.0"
   },
   "devDependencies": {},
