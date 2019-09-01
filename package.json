@@ -1,13 +1,13 @@
 {
   "name": "romildo-website",
   "private": true,
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^3.10.0",
     "gulp-htmlmin": "^4.0.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rccavalcanti/romildo-website.git"
