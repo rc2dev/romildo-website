@@ -1,21 +1,28 @@
 {
   "name": "romildo-website",
   "private": true,
-  "dependencies": {},
+  "main": "src/js/index.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2"
+  },
   "devDependencies": {
-    "del": "^3.0.0",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-htmlmin": "^4.0.0"
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "favicons-webpack-plugin": "^1.0.2",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rccavalcanti/romildo-website.git"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --host 0.0.0.0",
+    "build:prod": "webpack -p"
   },
-  "author": "Rafael Cavalcanti <rccavalcanti@gmail.com>",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/rccavalcanti/romildo-website/issues"
-  },
-  "homepage": "https://github.com/rccavalcanti/romildo-website#readme"
+  "author": "Rafael Cavalcanti",
+  "license": "ISC"
 }

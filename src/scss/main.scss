@@ -1,8 +1,22 @@
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import url("https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald|Lato");
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
 /* Font for document */
-body, h1, h2, h3, h4, h5, h6, p {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-family: "Lato", sans-serif;
 }
-
 
 /* Fonts for navbar and header */
 .title1 {
@@ -10,9 +24,8 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 .title2 {
-  font-family: 'Mr Dafoe', cursive;
+  font-family: "Mr Dafoe", cursive;
 }
-
 
 /* Create a Parallax Effect */
 .bgimg-1 {
@@ -22,13 +35,11 @@ body, h1, h2, h3, h4, h5, h6, p {
   background-size: cover;
 }
 
-
 /* Header image */
 .bgimg-1 {
-  background-image: url('/img/rj.jpg');
+  background-image: url("../img/rj.jpg");
   height: 100%;
 }
-
 
 /*  Turn off parallax scrolling and reduce size of
  the header picture for tablets and phones */
@@ -39,11 +50,11 @@ body, h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-body, html {
-  height: 100%;       /* Necessary for the header */
+body,
+html {
+  height: 100%; /* Necessary for the header */
   line-height: 1.8;
 }
-
 
 /* Title box */
 #title-box {
@@ -55,24 +66,24 @@ body, html {
   font-size: 56px;
 }
 
-
 /* Links except on navbar */
-.w3-container a, footer a {
+.w3-container a,
+footer a {
   text-decoration: none;
 }
 
-
 /* Big icons */
-.fa-home, .fa-map-marked-alt {
+.fa-home,
+.fa-map-marked-alt {
   font-size: 150px !important;
 }
 
-
 /* Space between icon and text */
-.fa-envelope, .fa-whatsapp, .fa-map-marker {
-  padding-right: 6px;   
+.fa-envelope,
+.fa-whatsapp,
+.fa-map-marker {
+  padding-right: 6px;
 }
-
 
 /* Contact list */
 ul {
@@ -92,7 +103,6 @@ li {
   color: #4267b2;
 }
 
-
 /* Footer spacing */
 footer p {
   margin-top: 5px;
@@ -102,7 +112,6 @@ footer p {
 .footer-col {
   margin-bottom: 30px;
 }
-
 
 /* Footer logo */
 #logo {
