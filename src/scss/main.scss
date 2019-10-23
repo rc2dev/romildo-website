@@ -7,28 +7,20 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 
 /* Font for document */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-family: "Lato", sans-serif;
+body {
+  font-family: "Lato", sans-serif !important;
 }
 
-/* Fonts for navbar and header */
-.title1 {
+/* Fonts for title */
+.font-strong {
   font-family: Oswald, sans-serif;
 }
 
-.title2 {
+.font-cursive {
   font-family: "Mr Dafoe", cursive;
 }
 
-/* Create a Parallax Effect */
-.bgimg-1 {
+@mixin parallaxEffect {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,14 +29,13 @@ p {
 
 /* Header image */
 .bgimg-1 {
-  background-image: url("../img/rj.jpg");
+  @include parallaxEffect();
+  background-image: url("../img/rj.webp");
   height: 100%;
-}
 
-/*  Turn off parallax scrolling and reduce size of
- the header picture for tablets and phones */
-@media only screen and (max-device-width: 1000px) {
-  .bgimg-1 {
+  /* Tablets and phones: turn off parallax and
+  reduce size of header picture */
+  @media only screen and (max-device-width: 1000px) {
     background-attachment: scroll;
     height: 50%;
   }
@@ -56,7 +47,6 @@ html {
   line-height: 1.8;
 }
 
-/* Title box */
 #title-box {
   margin-left: 7%;
   white-space: nowrap;
@@ -66,21 +56,11 @@ html {
   font-size: 56px;
 }
 
-/* Links except on navbar */
-.w3-container a,
-footer a {
+div:not(.w3-top) a {
   text-decoration: none;
 }
 
-/* Big icons */
-.fa-home,
-.fa-map-marked-alt {
-  font-size: 150px !important;
-}
-
 /* Space between icon and text */
-.fa-envelope,
-.fa-whatsapp,
 .fa-map-marker {
   padding-right: 6px;
 }
