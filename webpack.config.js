@@ -50,17 +50,6 @@ module.exports = {
             }
           }
         ]
-      },
-      {
-        test: /_redirects/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name]'
-            }
-          }
-        ]
       }
     ]
   },
