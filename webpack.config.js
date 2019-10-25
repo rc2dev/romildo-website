@@ -19,7 +19,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules\/(?!(autotrack|dom-utils))/,
-        loader: "babel-loader"
+        loader: 'babel-loader'
       },
       {
         test: /\.scss$/,
@@ -75,7 +75,9 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new FaviconsWebpackPlugin({
       logo: './src/img/logo_nolabel.png',
+      publicPath: '/assets/favicon',
       outputPath: '/assets/favicon',
+      prefix: '',
       favicons: {
         appName: 'Romildo Corretor',
         lang: 'pt-BR',
