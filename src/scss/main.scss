@@ -65,17 +65,24 @@ a {
   }
 }
 
-.contact-list {
-  list-style-type: none;
-  padding-left: 0px;
+.contact {
+  &__list {
+    list-style-type: none;
+    padding-left: 0px;
+  }
 
   &__item {
     margin-top: 25px;
+  }
+
+  &__icon {
+    font-size: 1.7rem;
   }
 }
 
 .fa-whatsapp {
   color: #009688;
+  margin-right: 0.3em;
 }
 
 .fa-facebook-official {
