@@ -1,23 +1,38 @@
-@import "~w3-css/w3";
-@import url("https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald|Lato");
-$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/brands";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
+@import '~w3-css/w3';
+@import url('https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald|Roboto');
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
 
-/* Font for document */
-body {
-  font-family: "Lato", sans-serif !important;
+/* nav bar */
+.nav {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.13rem;
 }
 
-/* Fonts for title */
-.font-strong {
-  font-family: Oswald, sans-serif;
+/* Fonts for document */
+h1 {
+  font-family: 'Oswald', sans-serif;
+  margin: 0.3em auto;
 }
 
+h5,
+p {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8;
+  margin: 0.4em auto;
+}
+
+/* Font for title */
 .font-cursive {
-  font-family: "Mr Dafoe", cursive;
+  font-family: 'Mr Dafoe', cursive;
+}
+
+a {
+  text-decoration: none;
 }
 
 @mixin parallaxEffect {
@@ -30,49 +45,33 @@ body {
 /* Header image */
 .bgimg-1 {
   @include parallaxEffect();
-  background-image: url("../img/rj.webp");
-  height: 100%;
+  background-image: url('../img/rj.webp');
+  height: 100vh;
 
   /* Tablets and phones: turn off parallax and
   reduce size of header picture */
   @media only screen and (max-device-width: 1000px) {
     background-attachment: scroll;
-    height: 50%;
+    height: 50vh;
   }
 }
 
-body,
-html {
-  height: 100%; /* Necessary for the header */
-  line-height: 1.8;
-}
-
-#title-box {
+.title {
   margin-left: 7%;
   white-space: nowrap;
+
+  &__text {
+    font-size: 56px;
+  }
 }
 
-#title-box h1 {
-  font-size: 56px;
-}
-
-div:not(.w3-top) a {
-  text-decoration: none;
-}
-
-/* Space between icon and text */
-.fa-map-marker {
-  padding-right: 6px;
-}
-
-/* Contact list */
-ul {
+.contact-list {
   list-style-type: none;
   padding-left: 0px;
-}
 
-li {
-  margin-top: 25px;
+  &__item {
+    margin-top: 25px;
+  }
 }
 
 .fa-whatsapp {
@@ -83,17 +82,16 @@ li {
   color: #4267b2;
 }
 
-/* Footer spacing */
+/* Footer */
 footer p {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.footer-col {
-  margin-bottom: 30px;
+.fa-map-marker {
+  padding-right: 6px;
 }
 
-/* Footer logo */
 #logo {
   height: 96px;
 }
