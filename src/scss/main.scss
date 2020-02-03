@@ -6,6 +6,13 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 
+@mixin parallaxEffect {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* nav bar */
 .nav {
   font-family: 'Oswald', sans-serif;
@@ -35,24 +42,24 @@ a {
   text-decoration: none;
 }
 
-@mixin parallaxEffect {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 /* Header image */
 .bgimg-1 {
   @include parallaxEffect();
-  background-image: url('../img/rj.webp');
   height: 100vh;
 
-  /* Tablets and phones: turn off parallax and
-  reduce size of header picture */
+  /* Tablets and phones: turn off parallax and reduce size */
   @media only screen and (max-device-width: 1000px) {
     background-attachment: scroll;
     height: 50vh;
+  }
+
+  /* Modernizr checks webp support */
+  .webp & {
+    background-image: url('../img/rj.webp');
+  }
+
+  .no-webp & {
+    background-image: url('../img/rj.jpg');
   }
 }
 
