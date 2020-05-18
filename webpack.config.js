@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -72,6 +73,9 @@ module.exports = {
         lang: 'pt-BR',
         start_url: '/'
       }
+    }),
+    new CopyPlugin({
+      patterns: [{ from: 'src/robots.txt', to: 'robots.txt' }],
     }),
     new CleanWebpackPlugin()
   ]
