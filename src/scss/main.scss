@@ -92,6 +92,9 @@ a:hover {
 
   &__item {
     margin-top: 25px;
+    // Vertically align icon and text
+    display: flex;
+    align-items: center;
   }
 
   &__icon {
