@@ -13,6 +13,10 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
   background-size: cover;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 /* nav bar */
 .nav {
   font-family: 'Oswald', sans-serif;
