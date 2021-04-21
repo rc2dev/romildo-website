@@ -91,11 +91,11 @@ a:hover {
 
   /* Modernizr checks webp support */
   .webp & {
-    --img-path: url('../img/city.webp');
+    --img-path: url('../img/city@1920px.webp');
   }
 
   .no-webp & {
-    --img-path: url('../img/city.jpg');
+    --img-path: url('../img/city@1920px.jpg');
   }
 
   @media only screen and (max-device-width: $width-tablet) {
