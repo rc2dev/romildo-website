@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald|Roboto');
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  margin: 0.3em auto;
+}
+
+h5,
+p {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8;
+  margin: 0.4em auto;
+}
+
+/* Font for title */
+.font-cursive {
+  font-family: 'Mr Dafoe', cursive;
+}

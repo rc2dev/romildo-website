@@ -1,0 +1,65 @@
+.header {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1.2rem;
+
+  /* Tablets and phones: reduce size */
+  @media only screen and (max-device-width: $width-tablet) {
+    height: 50vh;
+  }
+}
+
+/* Background image */
+.header::before {
+  --brightness: 0.85;
+  --blur: 0.75px;
+  --contrast: 115%;
+
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  background: var(--img-path);
+  background-size: cover;
+  filter: brightness(var(--brightness)) blur(var(--blur)) contrast(var(--contrast));
+
+  /* Modernizr checks webp support */
+  .webp & {
+    --img-path: url('../img/city@1920px.webp');
+  }
+
+  .no-webp & {
+    --img-path: url('../img/city@1920px.jpg');
+  }
+
+  @media only screen and (max-device-width: $width-tablet) {
+    --brightness: 0.5;
+    --blur: 0.9px;
+
+    /* Smaller pics for smaller devices */
+    .webp & {
+      --img-path: url('../img/city@1000px.webp');
+    }
+
+    .no-webp & {
+      --img-path: url('../img/city@1000px.jpg');
+    }
+  }
+}
+
+.title {
+  margin-top: 100px;
+
+  &__text {
+    font-size: 64px;
+    letter-spacing: .11em;
+    cursor: default;
+  }
+}

@@ -1,0 +1,25 @@
+.contact {
+  &__list {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  &__item {
+    margin-top: 25px;
+    // Vertically align icon and text
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 1.7rem;
+  }
+}
+
+.fa-whatsapp {
+  color: #009688;
+}
+
+.fa-facebook-official {
+  color: #4267b2;
+}
