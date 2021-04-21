@@ -6,6 +6,8 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 
+$width-tablet: 1000px;
+
 @mixin parallaxEffect {
   background-attachment: fixed;
   background-position: center;
@@ -63,13 +65,17 @@ a:hover {
   padding: 0 1.2rem;
 
   /* Tablets and phones: reduce size */
-  @media only screen and (max-device-width: 1000px) {
+  @media only screen and (max-device-width: $width-tablet) {
     height: 50vh;
   }
 }
 
 /* Background image */
 .header::before {
+  --brightness: 0.85;
+  --blur: 0.75px;
+  --contrast: 115%;
+
   content: '';
   position: absolute;
   top: 0;
@@ -80,7 +86,7 @@ a:hover {
 
   background: var(--img-path);
   background-size: cover;
-  filter: brightness(0.8) blur(0.75px);
+  filter: brightness(var(--brightness)) blur(var(--blur)) contrast(var(--contrast));
 
   /* Modernizr checks webp support */
   .webp & {
@@ -91,6 +97,10 @@ a:hover {
     --img-path: url('../img/city.jpg');
   }
 
+  @media only screen and (max-device-width: $width-tablet) {
+    --brightness: 0.5;
+    --blur: 0.9px;
+  }
 }
 
 .title {
