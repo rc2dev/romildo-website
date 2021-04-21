@@ -21,25 +21,24 @@
   <!-- Navbar (sit on top) -->
   <div class="nav w3-top">
     <div class="w3-bar w3-white w3-padding w3-card-2">
-      <a href="#home" class="w3-bar-item w3-button">
+      <div class="w3-content">
+      <a href="#home" class="w3-bar-item w3-button w3-hide-small">
         <b>ROMILDO</b> Corretor
       </a>
       <!-- Float links to the right. Hide them on small screens -->
-      <div class="w3-right w3-hide-small">
+      <div>
         <a href="/imoveis" target="_blank" rel="noopener" class="w3-bar-item w3-button">Imóveis</a>
         <a href="#about" class="w3-bar-item w3-button">Sobre</a>
         <a href="#contact" class="w3-bar-item w3-button">Contato</a>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Header (parallax image with logo text) -->
-  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-    <div class="title w3-display-left w3-margin-top w3-center w3-hide-small">
-      <h1 class="title__text">
-        <span class="w3-padding w3-black w3-opacity-min font-cursive">Romildo</span>
-        <span class="font-cursive"> Corretor</span>
-      </h1>
+  <!-- Header -->
+  <div class="header" id="home">
+    <div class="title">
+      <h1 class="title__text font-cursive w3-text-white">Romildo Corretor</h1>
     </div>
   </div>
 
@@ -116,9 +115,6 @@
         <p>Corretor Imobiliário</p>
         <p>CRECI 043420</p>
         <p><i class="fa fa-map-marker"></i> Rio de Janeiro, Brasil</p>
-      </div>
-      <div class="w3-third w3-padding-16 w3-center">
-        <img src="<%=require('./img/photo.jpg').default%>" alt="Minha foto" id="logo">
       </div>
       <div class="w3-row-padding">
         <p class="w3-padding-16 w3-center w3-small">

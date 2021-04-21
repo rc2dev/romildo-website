@@ -54,33 +54,52 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header image */
-.bgimg-1 {
-  @include parallaxEffect();
+.header {
   height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1.2rem;
 
-  /* Tablets and phones: turn off parallax and reduce size */
+  /* Tablets and phones: reduce size */
   @media only screen and (max-device-width: 1000px) {
-    background-attachment: scroll;
     height: 50vh;
-  }
-
-  /* Modernizr checks webp support */
-  .webp & {
-    background-image: url('../img/rj.webp');
-  }
-
-  .no-webp & {
-    background-image: url('../img/rj.jpg');
   }
 }
 
+/* Background image */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  background: var(--img-path);
+  background-size: cover;
+  filter: brightness(0.8) blur(0.75px);
+
+  /* Modernizr checks webp support */
+  .webp & {
+    --img-path: url('../img/city.webp');
+  }
+
+  .no-webp & {
+    --img-path: url('../img/city.jpg');
+  }
+
+}
+
 .title {
-  margin-left: 7%;
-  white-space: nowrap;
+  margin-top: 100px;
 
   &__text {
-    font-size: 56px;
+    font-size: 64px;
+    letter-spacing: .11em;
+    cursor: default;
   }
 }
 
