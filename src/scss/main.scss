@@ -1,8 +1,4 @@
-@import '~w3-css/w3';
-@import 'base/root';
-@import 'base/typography';
-@import 'base/variables';
-@import 'components/header';
-@import 'components/nav';
-@import 'components/contact';
-@import 'utilities/padding';
+@use '~w3-css/w3';
+@use './base';
+@use './components';
+@use './utilities';
