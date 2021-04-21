@@ -100,6 +100,15 @@ a:hover {
   @media only screen and (max-device-width: $width-tablet) {
     --brightness: 0.5;
     --blur: 0.9px;
+
+    /* Smaller pics for smaller devices */
+    .webp & {
+      --img-path: url('../img/city@1000px.webp');
+    }
+
+    .no-webp & {
+      --img-path: url('../img/city@1000px.jpg');
+    }
   }
 }
 
