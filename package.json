@@ -35,7 +35,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --progress --profile --content-base src/ --host 0.0.0.0",
-    "build": "webpack -p",
+    "build": "webpack --mode production",
     "autotrack": "autotrack -o src/js/autotrack.custom.js -p outboundLinkTracker"
   },
   "author": "Rafael Cavalcanti",

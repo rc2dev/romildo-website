@@ -7,24 +7,24 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   devServer: {
-    disableHostCheck: true
+    disableHostCheck: true,
   },
   entry: './src/js/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules\/(?!(autotrack|dom-utils))/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|jpg|webp)$/,
@@ -34,10 +34,10 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'assets/images/',
-              publicPath: 'assets/images/'
-            }
-          }
-        ]
+              publicPath: 'assets/images/',
+            },
+          },
+        ],
       },
       {
         test: /\.(ttf|eot|svg|gif|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -47,36 +47,35 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'assets/fonts/',
-              publicPath: 'assets/fonts/'
-            }
-          }
-        ]
-      }
-    ]
+              publicPath: 'assets/fonts/',
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
       minify: {
         removeComments: true,
-        collapseWhitespace: false
-      }
+        collapseWhitespace: false,
+      },
     }),
     new MiniCssExtractPlugin(),
     new FaviconsWebpackPlugin({
       logo: './src/img/logo_nolabel.png',
       publicPath: '/assets/favicon',
-      outputPath: '/assets/favicon',
-      prefix: '',
+      prefix: 'assets/favicon',
       favicons: {
         appName: 'Romildo Corretor',
         lang: 'pt-BR',
-        start_url: '/'
-      }
+        start_url: '/',
+      },
     }),
     new CopyPlugin({
       patterns: [{ from: 'src/robots.txt', to: 'robots.txt' }],
     }),
-    new CleanWebpackPlugin()
-  ]
+    new CleanWebpackPlugin(),
+  ],
 };
