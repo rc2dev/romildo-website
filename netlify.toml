@@ -1,3 +1,9 @@
+# Opt-out of FLoC (https://github.com/WICG/floc#opting-out-of-computation)
+[[headers]]
+  for="/*"
+  [headers.values]
+  Permissions-Policy="interest-cohort=()"
+
 [[redirects]]
   from = "/imoveis"
   to = "https://www.imovelweb.com.br/imobiliarias/romildo-cavalcanti_47064598-imoveis.html"
