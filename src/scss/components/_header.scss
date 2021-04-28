@@ -30,7 +30,8 @@
 
   background: var(--img-path);
   background-size: cover;
-  filter: brightness(var(--brightness)) blur(var(--blur)) contrast(var(--contrast));
+  filter: brightness(var(--brightness)) blur(var(--blur))
+    contrast(var(--contrast));
 
   /* Modernizr checks webp support */
   .webp & {
