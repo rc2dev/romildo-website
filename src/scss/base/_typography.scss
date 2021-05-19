@@ -5,16 +5,19 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import url('https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald|Roboto');
 
-h2 {
-  font-family: 'Oswald', sans-serif;
-  margin: 0.3em auto;
+body {
+  font-size: 16px;
 }
 
-h5,
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
 p {
   font-family: 'Roboto', sans-serif;
   line-height: 1.8;
-  margin: 0.4em auto;
 }
 
 /* Font for title */
