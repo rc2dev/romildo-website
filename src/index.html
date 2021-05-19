@@ -17,77 +17,54 @@
     Salas comerciais, apartamentos.</title>
 </head>
 <body>
-
-  <!-- Navbar (sit on top) -->
-  <div class="nav w3-top">
-    <div class="w3-bar w3-white w3-padding w3-card-2">
-      <div class="w3-content">
-        <a href="#home" class="w3-bar-item w3-button w3-hide-small">
-          <b>ROMILDO</b> Corretor
-        </a>
-        <div>
-          <a href="/imoveis" target="_blank" rel="noopener" class="w3-bar-item w3-button">Imóveis</a>
-          <a href="#about" class="w3-bar-item w3-button">Sobre</a>
-          <a href="#contact" class="w3-bar-item w3-button">Contato</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Header -->
   <div class="header" id="home">
     <h1 class="title font-cursive w3-text-white">Romildo Corretor</h1>
-    </div>
   </div>
 
-  <!-- First grid -->
-  <div class="w3-row-padding w3-padding-64 w3-container" id="about">
-    <div class="w3-content">
-      <div class="w3-twothird">
-        <h1>Compra, venda, aluguel e avaliação de imóveis</h1>
-        <h5 class="w3-padding-32">Ofereço toda a assessoria necessária para a
-          realização de uma transação segura e tranquila em imóveis
-          residenciais e comerciais.</h5>
-        <p class="w3-text-grey">Reconhecido no mercado imobiliário pela ética
+  <!-- About -->
+  <div class="w3-container w3-content margin-64-y">
+    <div class="about" id="about">
+      <div class="about__item">
+        <h2 class="color-primary padding-16-bottom">Compra, venda, aluguel e avaliação de imóveis</h2>
+        <p>Ofereço toda a assessoria necessária para a
+              realização de uma transação segura e tranquila em imóveis
+              residenciais e comerciais.</p>
+      </div>
+
+      <div class="about__item">
+        <h2 class="color-primary padding-16-bottom">Atuação na cidade do Rio</h2>
+        <p>Com ênfase na Zona Sul, Barra da Tijuca, Recreio e adjacências.</p>
+      </div>
+
+      <div class="about__item">
+        <h2 class="color-primary padding-16-bottom">Ética e transparência</h2>
+        <p>Reconhecido no mercado imobiliário pela ética
           profissional e transparência, oferecendo a cada cliente um atendimento
           personalizado, resultando em segurança e satisfação em todos os
           negócios realizados.</p>
       </div>
-      <div class="w3-third w3-center">
-        <i class="fa fa-10x fa-home w3-padding-64 w3-text-blue-gray w3-hide-small"></i>
-      </div>
-    </div>
-  </div>
 
-  <!-- Second grid -->
-  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-    <div class="w3-content">
-      <div class="w3-third w3-center padding-64-bottom">
-        <i class="fa fa-10x fa-map-marked-alt w3-text-blue-gray
-          w3-margin-right"></i>
-      </div>
-      <div class="w3-twothird">
-        <h1>Atuação na cidade do Rio</h1>
-        <h5 class="w3-padding-32">Com ênfase na Zona Sul, Barra da Tijuca, Recreio e adjacências.</h5>
-        <p class="w3-text-grey"><a href="#contact">Entre em contato</a> e terei o
-          prazer em ajudá-lo a realizar o sonho de adquirir a casa própria.</p>
+      <div class="about__item">
+        <h2 class="color-primary padding-16-bottom">Ao seu dispor</h2>
+        <p>Entre em contato e terei o prazer em ajudá-lo a realizar o sonho de adquirir a casa própria.</p>
       </div>
     </div>
   </div>
 
   <!-- Portfolio -->
-  <div class="w3-container w3-black w3-center w3-opacity w3-padding-64" id="more">
-    <h1 class="w3-margin">
+  <div class="w3-container bgcolor-primary w3-text-white w3-center w3-padding-32" id="more">
+    <h2 class="w3-margin">
       <span class="fa fa-arrow-circle-right"></span>
       <a href="/imoveis" target="_blank" rel="noopener">Clique aqui e veja as oportunidades</a>
-    </h1>
+    </h2>
   </div>
 
   <!-- Contact -->
   <div class="contact w3-row-padding w3-padding-64 w3-container" id="contact">
     <div class="w3-content">
-      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-        Entre em contato</h1>
+      <h2 class="w3-border-bottom w3-border-light-grey padding-16-bottom color-primary">
+        Entre em contato</h2>
       <ul class="contact__list">
         <li class="contact__item">
           <i class="contact__icon far fa-envelope w3-padding"></i>
@@ -102,11 +79,13 @@
       </ul>
     </div>
   </div>
+</div>
 
   <!-- Footer -->
-  <footer class="w3-row-padding w3-black w3-padding-16">
+  <footer class="w3-row-padding w3-padding-32 bgcolor-darkgrey w3-text-white">
     <div class="w3-content">
-        <p class="w3-center w3-small">Romildo R. Cavalcanti • Corretor Imobiliário • CRECI 043420</p>
+        <p class="w3-center w3-small">Romildo R. Cavalcanti</p>
+        <p class="w3-center w3-small">Corretor Imobiliário • CRECI 043420</p>
         <p class="w3-center w3-small"><i class="fa fa-map-marker padding-6-right"></i>Rio de Janeiro, Brasil</p>
         <p class="w3-center w3-small padding-32-top">
           &copy; Copyright 2017-<script>document.write(new Date().getFullYear());</script>
