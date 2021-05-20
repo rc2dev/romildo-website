@@ -1,5 +1,9 @@
 @use '../abstracts/variables' as *;
 
+.header--ie {
+  display: none;
+}
+
 .header {
   height: 70vh;
   position: relative;
@@ -66,5 +70,16 @@
 
   @media only screen and (max-device-width: $width-tablet) {
     margin-top: $nav-height;
+  }
+}
+
+// IE11 fixes
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header--ie {
+    display: block;
+  }
+
+  .header {
+    display: none;
   }
 }
