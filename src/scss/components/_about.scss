@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 64px;
+  row-gap: 32px;
 }
 
 @media (max-width: $width-mobile) {
