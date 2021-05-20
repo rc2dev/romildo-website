@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
 
 .header {
-  height: 100vh;
+  height: 70vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -30,6 +30,7 @@
 
   background: var(--img-path);
   background-size: cover;
+  background-position: 50% 15%;
   filter: brightness(var(--brightness)) blur(var(--blur))
     contrast(var(--contrast));
 
