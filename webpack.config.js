@@ -65,8 +65,6 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new FaviconsWebpackPlugin({
       logo: './src/img/logo_nolabel.png',
-      publicPath: '/assets/favicon',
-      prefix: 'assets/favicon',
       favicons: {
         appName: 'Romildo Corretor',
         lang: 'pt-BR',
