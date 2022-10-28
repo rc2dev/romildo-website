@@ -39,19 +39,6 @@ module.exports = {
         test: /\.(png|jpg|webp)$/,
         type: 'asset/resource',
       },
-      {
-        test: /\.(ttf|eot|svg|gif|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/fonts/',
-              publicPath: 'assets/fonts/',
-            },
-          },
-        ],
-      },
     ],
   },
   plugins: [
