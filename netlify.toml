@@ -1,3 +1,7 @@
+[build.environment]
+  # Node on Netlify's image is too old - this fixes build error.
+  NODE_VERSION = "16"
+
 [[redirects]]
   from = "/imoveis"
   to = "https://www.vivareal.com.br/100695/romildo-rocha-cavalcanti/"
