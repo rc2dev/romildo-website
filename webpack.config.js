@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   devServer: {
@@ -14,6 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle[contenthash].js',
     publicPath: '/',
+    clean: true,
   },
   module: {
     rules: [
@@ -77,6 +77,5 @@ module.exports = {
     new CopyPlugin({
       patterns: [{ from: 'src/robots.txt', to: 'robots.txt' }],
     }),
-    new CleanWebpackPlugin(),
   ],
 };
