@@ -54,7 +54,9 @@ module.exports = {
       },
     }),
     new CopyPlugin({
-      patterns: [{ from: 'src/robots.txt', to: 'robots.txt' }],
+      patterns: [
+        { from: '**/*', to: '[path][name][ext]', context: 'src/public/' }
+      ],
     }),
   ],
 };
