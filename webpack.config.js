@@ -7,9 +7,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   devServer: {
+    host: '0.0.0.0',
     port: 9000,
   },
-  entry: './src/js/index.js',
+  entry: path.resolve(__dirname, 'src/js/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
