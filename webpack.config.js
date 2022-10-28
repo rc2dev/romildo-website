@@ -8,7 +8,7 @@ module.exports = {
     host: '0.0.0.0',
     port: 9000,
   },
-  entry: path.resolve(__dirname, 'src/js/index.js'),
+  entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle[contenthash].js',
@@ -65,7 +65,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/template.html',
       minify: {
         removeComments: true,
         collapseWhitespace: false,
