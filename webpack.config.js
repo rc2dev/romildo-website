@@ -37,16 +37,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|webp)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images/',
-              publicPath: 'assets/images/',
-            },
-          },
-        ],
+        type: 'asset/resource',
       },
       {
         test: /\.(ttf|eot|svg|gif|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
