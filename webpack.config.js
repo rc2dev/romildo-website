@@ -35,32 +35,6 @@ module.exports = {
           'sass-loader'
         ],
       },
-      {
-        test: /\.(png|jpg|webp)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images/',
-              publicPath: 'assets/images/',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(ttf|eot|svg|gif|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/fonts/',
-              publicPath: 'assets/fonts/',
-            },
-          },
-        ],
-      },
     ],
   },
   plugins: [
