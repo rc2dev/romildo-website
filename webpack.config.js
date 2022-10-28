@@ -1,5 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -25,7 +24,11 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
       },
       {
         test: /\.(png|jpg|webp)$/,
@@ -63,7 +66,6 @@ module.exports = {
         collapseWhitespace: false,
       },
     }),
-    new MiniCssExtractPlugin(),
     new FaviconsWebpackPlugin({
       logo: './src/img/logo_nolabel.png',
       favicons: {
