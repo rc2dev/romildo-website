@@ -24,11 +24,6 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
