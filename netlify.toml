@@ -1,9 +1,3 @@
-# Opt-out of FLoC (https://github.com/WICG/floc#opting-out-of-computation)
-[[headers]]
-  for="/*"
-  [headers.values]
-  Permissions-Policy="interest-cohort=()"
-
 [[redirects]]
   from = "/imoveis"
   to = "https://www.vivareal.com.br/100695/romildo-rocha-cavalcanti/"
