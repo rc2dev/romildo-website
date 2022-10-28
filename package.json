@@ -4,7 +4,6 @@
   "main": "src/js/index.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
-    "autotrack": "^2.4.1",
     "w3-css": "^4.1.0"
   },
   "devDependencies": {
@@ -25,8 +24,7 @@
   },
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
-    "autotrack": "autotrack -o src/js/autotrack.custom.js -p outboundLinkTracker"
+    "build": "webpack --mode production"
   },
   "author": "Rafael Cavalcanti",
   "license": "ISC"
