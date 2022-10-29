@@ -16,9 +16,11 @@
   <title>Romildo - Corretor na Barra, Recreio, zona sul do Rio de Janeiro.
     Salas comerciais, apartamentos.</title>
 
-  <!-- Lighthouse -->
+  <!-- Lighthouse suggests preconnect and display=swap -->
+  <!-- media and onload are a way to make this loading non-blocking; noscript below to complement -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald|Roboto&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald|Roboto&display=swap"
+                         media="print" onload="this.onload=null;this.removeAttribute('media');">
 </head>
 <body>
   <!-- Header -->
@@ -106,5 +108,8 @@
     ga('send', 'pageview');
   </script>
   <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald|Roboto&display=swap">
+  </noscript>
 </body>
 </html>
