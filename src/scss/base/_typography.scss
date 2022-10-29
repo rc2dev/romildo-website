@@ -3,7 +3,8 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
-@import url('https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald|Roboto');
+// Swap is a suggestion from Lighthouse
+@import url('https://fonts.googleapis.com/css?family=Mr+Dafoe|Oswald|Roboto&display=swap');
 
 body {
   font-size: 16px;
