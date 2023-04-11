@@ -1,6 +1,6 @@
 [build.environment]
   # Node on Netlify's image is too old - this fixes build error.
-  NODE_VERSION = "16"
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/imoveis"
